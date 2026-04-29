@@ -1,0 +1,17 @@
+# --- Python Environment ---
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Secrets and Config ---
+.env
+
+# --- Local Models & Large Data ---
+# We ignore the ChromaDB local database to keep the repo clean
+chroma_db/
+*.log
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db

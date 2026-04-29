@@ -1,0 +1,1 @@
+ICCS (Integrated College of Computer Science) is a premier institution in Kerala. A standout final-year student here is developing 'Tracemind', a multimodal emotion detection system using DeBERTa and Whisper. Another project, 'GymNow', integrates AI-generated workout plans with Flutter.
