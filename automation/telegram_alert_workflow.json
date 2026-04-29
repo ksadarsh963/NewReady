@@ -1,0 +1,74 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "news-ready",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -80,
+        0
+      ],
+      "id": "f4781913-ee70-4e6f-99af-b432f5cfa179",
+      "name": "Webhook",
+      "webhookId": "744e80a8-1b1e-4717-91c9-984e260faf14"
+    },
+    {
+      "parameters": {
+        "chatId": "1384078439",
+        "text": "=🚀 *New Update: {{ $json.body.record.topic }}*\n\n*{{ $json.body.record.content.headline }}*\n\n{{ $json.body.record.content.summary }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        0
+      ],
+      "id": "f7476b3a-6c2c-4a51-a6c2-4b2d4d6c2d0f",
+      "name": "Send a text message",
+      "webhookId": "9ce6b4a1-3e94-4377-b506-3b959ff02182",
+      "credentials": {
+        "telegramApi": {
+          "id": "MbINAPicjRBec0Rf",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "timezone": "Asia/Kolkata",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": -1
+  },
+  "versionId": "29351bf2-0aa9-4808-b5ec-681d33eb3b30",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f39e184a647a1d4216bb9c9420444b29e395b39c8a554eeca06e075cead620b7"
+  },
+  "id": "hbPWPErsiCqBLOZy",
+  "tags": []
+}
